@@ -3,11 +3,14 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -20,17 +23,21 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -77,10 +84,17 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -94,7 +108,54 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#    . /etc/bash_completion
-#fi
-alias config='/usr/bin/git --git-dir=/root/.cfg/ --work-tree=/root'
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# git aliases
+alias g!='git init'
+&& alias g.='git add .'
+&& alias g.-file='git add'
+&& alias gb='git branch'
+&& alias gb-a='git branch -a'
+&& alias gb-d='git branch -d'
+&& alias gb-name='git branch -m'
+&& alias gb-new='git checkout -b'
+&& alias g!.='git checkout -- .'
+&& alias gblame='git blame'
+&& alias gcl='git clone'
+&& alias gc='git commit -m'
+&& alias gcout='git checkout'
+&& alias gd='git diff'
+&& alias gk='gitk'
+&& alias gf='git fetch'
+&& alias gl='git log'
+&& alias gl-s='git log --summary'
+&& alias gph='git push'
+&& alias gph-f='git push -f'
+&& alias gpl='git pull'
+&& alias gr='git remote'
+&& alias gr-list='git remote -v'
+&& alias gr-add='git remote add'
+&& alias greset='git reset --hard'
+&& alias grevert-head='git revert HEAD'
+&& alias grevert='git revert'
+&& alias gs='git status'
+&& alias gsh='git stash'
+&& alias gsh-a='git stash apply'
+&& alias gsh-c='git stash clear'
+&& alias gsh-d='git stash drop'
+&& alias gsh-l='git stash list'
+&& alias gsh-p='git stash pop'
+&& alias gl='git log --graph --decorate --all'
+&& alias gt='git tag -l --sort=v:refname | tail -n8'
+&& alias g.c='git add . && git commit -m'
+&& alias grb='git rebase'
+&& alias gsw='git show'
+&& alias gthis=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,');
+gph-this() { git push "$1" $gthis; }; 
+gpl-this() { git pull "$1" $gthis; };
