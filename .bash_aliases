@@ -27,7 +27,17 @@ alias gsh-d='git stash drop'
 alias gsh-l='git stash list'
 alias gsh-p='git stash pop'
 
-# Personal
 
-alias chrome = ''
-alias blog='chrome https://bolajiayodeji.com'
+#Personal
+
+alias blog='google-chrome https://bolajiayodeji.com'
+alias letter='google-chrome https://tinyletter.com/bolajiayodeji'
+alias patreon='google-chrome https://www.patreon.com/bolajiayodeji'
+alias github='google-chrome https://github.com/BolajiAyodeji'
+alias twitter='google-chrome https://twitter.com/iambolajiayo'
+alias linkedin='google-chrome https://linkedin.com/in/iambolajiayo/'
+alias facebook='google-chrome https://facebook.com/iambolajiayo'
+alias instagram='google-chrome https://instagram.com/iambolajiayo'
+alias hashnode='google-chrome https://hashnode.com/@bolajiayodeji'
+alias devblog='google-chrome https://hashnode.com/devblog'
+alias devblog='google-chrome https://notion.so'
