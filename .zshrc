@@ -8,6 +8,14 @@ source ~/.nvm/nvm.sh
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bolajiayodeji/.oh-my-zsh"
 
+# Zsh theme
+ZSH_THEME="robbyrussell"
+
+# Plugins
+plugins=(git node npm extract)
+
+source $ZSH/oh-my-zsh.sh
+
 # General
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
