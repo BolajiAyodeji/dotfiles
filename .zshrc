@@ -9,7 +9,7 @@ source ~/.nvm/nvm.sh
 export ZSH="/Users/bolajiayodeji/.oh-my-zsh"
 
 # Zsh theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Plugins
 plugins=(git node npm extract)
