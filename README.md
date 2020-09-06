@@ -1,3 +1,3 @@
 # dotfiles
 
-My dotfiles, aliases, configurations, and my general workspace setup
+My dotfiles, aliases, configurations, and general workspace setup
