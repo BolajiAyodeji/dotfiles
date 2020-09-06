@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "New Moon Blue",
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 16,
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDelete": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+}
