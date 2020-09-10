@@ -21,6 +21,7 @@ alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias zshrel='source ~/.zshrc'
 alias tr='trash'
+alias update='brew update; brew upgrade; brew cu -ay; brew cleanup; pip install --upgrade `pip list --outdated | awk 'NR>2 {print $1}'`
 
 # Enable color output
 export CLICOLOR=1
