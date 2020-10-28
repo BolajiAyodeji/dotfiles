@@ -1,7 +1,7 @@
 {
     "workbench.colorTheme": "New Moon Blue",
     "files.autoSave": "onFocusChange",
-    "editor.fontSize": 16,
+    "editor.fontSize": 20,
     "workbench.iconTheme": "material-icon-theme",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
