@@ -1,3 +1,8 @@
+[user]
+  name   = Bolaji Ayodeji
+  email  = sirbeejay1@gmail.com
+[github]
+  user   = bolajiayodeji
 [alias]
   # Show verbose output about tags, branches or remotes
   tags = tag -l
@@ -22,6 +27,3 @@
 [color "status"]
   added = yellow
   changed = green
-  untracked = cyan
-[user]
-        name = bolajiayodeji
