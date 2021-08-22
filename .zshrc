@@ -23,6 +23,9 @@ source $ZSH/oh-my-zsh.sh
 # Load renv
 eval "$(rbenv init -)"
 
+# PG
+PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 # General
 alias zshconfig='vim ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
