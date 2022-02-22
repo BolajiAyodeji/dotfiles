@@ -1,9 +1,15 @@
+#### FIG ENV VARIABLES ####
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 # If you come from bash you might have to change your $PATH.
 source /Users/bolajiayodeji/.bash_profile
 
 # NVM stuff
-export NVM_DIR="~/.nvm"
 source ~/.nvm/nvm.sh
+export NVM_LAZY=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bolajiayodeji/.oh-my-zsh"
@@ -16,7 +22,7 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 # Plugins
-plugins=(git node npm extract)
+plugins=(git node npm extract nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,3 +76,8 @@ alias gchrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias blog='google-chrome https://bolajiayodeji.com'
 alias patreon='google-chrome https://www.patreon.com/bolajiayodeji'
 alias gh='google-chrome https://github.com/BolajiAyodeji'
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
