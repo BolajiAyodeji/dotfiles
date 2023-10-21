@@ -31,6 +31,7 @@ PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # General
 alias zshconfig='vim ~/.zshrc'
+alias bashconfig='vim ~/.bash_profile'
 alias gitconfig='vim ~/.gitconfig'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias zshrel='source ~/.zshrc'
