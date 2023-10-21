@@ -1,18 +1,15 @@
-#### FIG ENV VARIABLES ####
-#### FIG ENV VARIABLES ####
 # Please make sure this block is at the start of this file.
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
 
 # If you come from bash you might have to change your $PATH.
-source /Users/bolajiayodeji/.bash_profile
+source $HOME/.bash_profile
 
 # NVM stuff
 source ~/.nvm/nvm.sh
 export NVM_LAZY=1
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bolajiayodeji/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Zsh theme
 ZSH_THEME="spaceship"
@@ -39,13 +36,12 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias zshrel='source ~/.zshrc'
 alias tr='trash'
 alias update='brew update; brew upgrade; brew cu -ay; brew cleanup;'
+alias l='ls | lolcat'
+alias la='ls -la | lolcat'
 
 # Enable color output
 export CLICOLOR=1
 export LSCOLORS=gx
-
-alias l='ls | lolcat'
-alias la='ls -la | lolcat'
 
 # Git
 alias g!='git init && gac "Initial commit :unicorn:"'
@@ -71,13 +67,5 @@ alias gsh-d='git stash drop'
 alias gsh-l='git stash list'
 alias gsh-p='git stash pop'
 
-# Personal
-alias gchrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias blog='google-chrome https://bolajiayodeji.com'
-alias patreon='google-chrome https://www.patreon.com/bolajiayodeji'
-alias gh='google-chrome https://github.com/BolajiAyodeji'
-
-#### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
