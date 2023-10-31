@@ -9,8 +9,8 @@ source ~/.nvm/nvm.sh
 export NVM_LAZY=1
 
 # Path to your oh-my-zsh installation
-source $ZSH/oh-my-zsh.sh
 export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # Zsh theme
 ZSH_THEME="spaceship"
