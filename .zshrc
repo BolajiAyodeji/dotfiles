@@ -10,13 +10,13 @@ export NVM_LAZY=1
 
 # Path to your oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 
-# Zsh theme
+# Set Zsh external theme (installed through ohmyzsh symlink)
 ZSH_THEME="spaceship"
 
-# Plugins
-plugins=(git node npm extract nvm)
+# Set Zsh theme as prompt
+autoload -U promptinit; promptinit
+source $ZSH/oh-my-zsh.sh
 
 # Load renv
 eval "$(rbenv init -)"
@@ -28,10 +28,16 @@ PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 alias zshconfig='vim ~/.zshrc'
 alias bashconfig='vim ~/.bash_profile'
 alias gitconfig='vim ~/.gitconfig'
+alias ohmyzsh='vim ~/.oh-my-zsh'
+alias zshrel='source ~/.zshrc'
 alias tr='trash'
 alias update='brew update; brew upgrade; brew cu -ay; brew cleanup;'
 alias l='ls | lolcat'
 alias la='ls -la | lolcat'
+
+# Enable color output
+export CLICOLOR=1
+export LSCOLORS=gx
 
 # Git
 alias g!='git init && gac "Initial commit :unicorn:"'
