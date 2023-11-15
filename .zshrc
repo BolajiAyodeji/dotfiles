@@ -8,6 +8,9 @@ source ~/.bash_profile
 source ~/.nvm/nvm.sh
 export NVM_LAZY=1
 
+# PIP stuff
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin"
+
 # Path to your oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
