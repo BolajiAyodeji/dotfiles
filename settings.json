@@ -1,0 +1,112 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "bloop.openOnSuggestionsAvailable": false,
+  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 21,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onFocusChange",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md",
+    "**/*.mdx"
+  ],
+  "grammarly.userWords": ["Hashnode", "Runkit"],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "python.pythonPath": "/usr/bin/python",
+  "redhat.telemetry.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "totalTypeScript.hiddenTips": [
+    "interface-declaration",
+    "typing-function-parameters",
+    "optional-object-property",
+    "ts-object-type",
+    "variable-type-annotation",
+    "passing-generics-to-types",
+    "basic-types",
+    "literal-type",
+    "type-alias-declaration",
+    "union-type",
+    "as-assertion",
+    "any-type",
+    "null-keyword",
+    "mapped-type",
+    "never-keyword",
+    "array-type",
+    "undefined-keyword",
+    "record-utility-type",
+    "function-return-type"
+  ],
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Oceanic Next",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "*.pickle": "default"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "yaml.schemas": {
+    "file:///Users/bolajiayodeji/.vscode/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "git.terminalGitEditor": true,
+  "workbench.sideBar.location": "right",
+  "vsicons.dontShowNewVersionMessage": true,
+  "settingsSync.ignoredExtensions": []
+}
