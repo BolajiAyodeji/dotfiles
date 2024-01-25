@@ -33,6 +33,7 @@ eval "$(rbenv init -)"
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # General
+alias python=python3
 alias zshconfig='vim ~/.zshrc'
 alias bashconfig='vim ~/.bash_profile'
 alias gitconfig='vim ~/.gitconfig'
