@@ -1,6 +1,8 @@
 # Please make sure this block is at the start of this file
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 
+BASE_DIR="/Users/<username>"
+
 # If you come from bash you might have to change your $PATH
 source ~/.bash_profile
 
@@ -8,10 +10,13 @@ source ~/.bash_profile
 source ~/.nvm/nvm.sh
 export NVM_LAZY=1
 
-# PIP stuff
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin"
+# Python (PIP) stuff
+export PATH="$PATH:$BASE_DIR/Library/Python/3.9/bin"
 
-# Path to your oh-my-zsh installation
+# Golang stuff
+export PATH="$PATH:$BASE_DIR/go/bin"
+
+# Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set Zsh external theme (installed through ohmyzsh symlink)
