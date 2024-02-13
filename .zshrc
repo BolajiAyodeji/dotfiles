@@ -16,6 +16,9 @@ export PATH="$PATH:$BASE_DIR/Library/Python/3.9/bin"
 # Golang stuff
 export PATH="$PATH:$BASE_DIR/go/bin"
 
+#Java stuff
+export PATH="$PATH:$BASE_DIR/apache-maven-3.9.6/bin"
+
 # Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
