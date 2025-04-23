@@ -47,26 +47,17 @@ export LSCOLORS=gx
 
 # Git
 alias g!='git init && gac "Initial commit :unicorn:"'
-BASE_DIR="/Users/<username>"
-
-# If you come from bash you might have to change your $PATH
-# source ~/.bash_profile
-
-# NVM stuff
-source ~/.nvm/nvm.sh
-export NVM_LAZY=1
-
-# Python (PIP) stuff
-export PATH="$PATH:$BASE_DIR/Library/Python/3.9/bin"
-
-# Golang stuff
-export PATH="$PATH:$BASE_DIR/go/bin"
-
-#Java stuff
-export PATH="$PATH:$BASE_DIR/apache-maven-3.9.6/bin"
-
-# Path to oh-my-zsh installation
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set Zsh external theme (installed through ohmyzsh symlink)
-ZSH_THEME="spaceship"
+alias gcl='git clone'
+alias g.='git add .'
+alias gc='git-cz --disable-emoji'
+alias gb='git branch'
+alias gch='git checkout'
+alias gchn='git checkout -b'
+alias gblame='git blame'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git log'
+alias gph='git push'
+alias gph-f='git push -f'
+alias gpl='git pull'
+alias gr='git remote'
